@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="" style="width: 100%; height: 100vh;display: flex">
+    
+    <div style="margin: auto auto; background-color: rgba(250, 235, 215, 0.743); text-align: center; width:500px;height: 400px; border-radius: 10px;">
+        <h1><span style="font-size: 2em;">S</span><span style="font-size: 1.5em;">erver under reaper</span></h1>
+        <h1 style="color: brown;">500</h1>
+    
+        <div style="margin-top: 2em;">
+            <img src="{{ url_for('static', path='/media/img/500.png')}}" alt="server" width="200px">
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

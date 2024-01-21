@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- titile here  -->
+    <title>Comapany</title>
+
+    <!--  page iocon here -->
+    <link rel="shortcut icon" href="{{ url_for('static', path='/media/icon/logo.ico') }}">
+    
+    <!-- addin manifest -->
+    <link rel="manifest" href="{{ url_for('static', path='/manifest/manifest.json') }}">
+    {% block css %}
+      <link rel="stylesheet" href="{{ url_for('static', path='css/main.css')}}">
+    {% endblock css %}
+    
+</head>
+<body>
+  <div class="block">
+    
+    <header>
+        <!--  navar goes here -->
+        {% block nav %}{% endblock nav %}
+    </header>
+
+    <div class="block">
+      <!--  main content goes here  -->
+      {% block content %} {% endblock content %}
+    </div>
+
+    <div class="block " >
+      <!--  here goes the fotter  -->
+      {% block footer %} {% endblock footer %}
+    </div>
+
+  </div>
+  {% block js %}
+    <script type="text/javascript" src="{{ url_for('static', path='js/script.js')}}"></script>
+  {% endblock js %}
+</body>
+</html>
